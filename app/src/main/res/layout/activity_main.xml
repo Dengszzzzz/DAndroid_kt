@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg">
+
+    <FrameLayout
+        android:id="@+id/fr_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_bottom_view" />
+
+    <LinearLayout
+        android:id="@+id/ll_bottom_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line" />
+
+        <RadioGroup
+            android:id="@+id/tabs_rg"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rg_view_details"
+                style="@style/TabRadioButton"
+                android:drawableTop="@drawable/tab_train_selector"
+                android:text="控件详解" />
+
+            <RadioButton
+                android:id="@+id/rg_special_functions"
+                style="@style/TabRadioButton"
+                android:drawableTop="@drawable/tab_main_selector"
+                android:text="特殊功能" />
+
+
+
+            <View style="@style/TabRadioButton" />
+
+            <RadioButton
+                android:id="@+id/rg_problems"
+                style="@style/TabRadioButton"
+                android:drawableTop="@drawable/tab_find_selector"
+                android:text="疑难杂症" />
+
+            <RadioButton
+                android:id="@+id/rg_summary"
+                style="@style/TabRadioButton"
+                android:drawableTop="@drawable/tab_me_selector"
+                android:text="总结" />
+        </RadioGroup>
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/iv_center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/scan_tab" />
+
+
+</RelativeLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/top_view"/>
+
+    <ImageView
+        android:id="@+id/iv_share_top"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:scaleType="fitXY"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:transitionName="@string/share_iv_top_str"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/tv_share_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RunningMan"
+        android:layout_gravity="center"
+        android:textSize="@dimen/text_size15"
+        android:transitionName="@string/share_tv_name_str" />
+
+        <TextView
+            android:id="@+id/tv_share_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2019/6/13"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center"
+            android:textSize="@dimen/text_size15"
+            android:transitionName="@string/tv_share_date_str"
+            />
+
+    </LinearLayout>
+
+
+
+    <Button
+        android:id="@+id/btn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="直接进入"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"/>
+
+    <Button
+        android:id="@+id/btn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="单-共享进入"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"/>
+
+
+    <Button
+        android:id="@+id/btn3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="多-共享进入"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"/>
+
+
+</LinearLayout>

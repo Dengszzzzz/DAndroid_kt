@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg">
+
+    <include
+        layout="@layout/top_view"/>
+
+    <!--
+    tabMode有两种属性：fixed和 scrollable；fixed：指的是固定tab；scrollable指的是tab可滑动。
+    tabGravity有两种属性：center和fill；center指的是居中显示，fill指的是沾满全屏。
+    取消点击效果用下面两个属性：
+    app:tabBackground="@color/transparent"
+    app:tabRippleColor="@color/transparent"
+
+    -->
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="84dp"
+        android:background="@color/white"
+        app:tabTextColor="@color/c_999999"
+        app:tabSelectedTextColor="@color/c_87cfdc"
+        app:tabIndicatorColor="@color/c_87cfdc"
+        app:tabIndicatorHeight="1dp"
+        app:tabMode="fixed"
+        app:tabGravity="fill"
+        app:tabBackground="@color/transparent"
+        app:tabRippleColor="@color/transparent"
+        />
+
+    <View
+        style="@style/line"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

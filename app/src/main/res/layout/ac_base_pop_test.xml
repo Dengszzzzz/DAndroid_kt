@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        layout="@layout/top_view"/>
+
+    <Button
+        android:id="@+id/btPop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="显示示例弹窗"/>
+
+    <Button
+        android:id="@+id/btPop1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="显示时间选择弹窗"/>
+
+    <Button
+        android:id="@+id/btPop2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="显示TAG选择弹窗"/>
+
+</LinearLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg">
+
+    <include
+        layout="@layout/top_view"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    <Button
+        android:id="@+id/btn_slide_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Slide 进入"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"/>
+
+    <Button
+        android:id="@+id/btn_slide_in2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Slide 进入，代码"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btn_fade_in"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="fade 进入"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"/>
+
+        <Button
+            android:id="@+id/btn_fade_in2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="fade 进入代码"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btn_explode_in"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="explode 分解"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"/>
+    </LinearLayout>
+
+</LinearLayout>

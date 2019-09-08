@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/translucent">
+
+    <!--内容-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingBottom="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="按日期查询"
+            android:textSize="@dimen/text_size15"
+            android:layout_marginLeft="15dp"
+            android:textColor="@color/c_333333"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size15"
+                android:textColor="@color/c_333333"
+                android:text="起始日期"/>
+
+            <TextView
+                android:id="@+id/startTimeTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size15"
+                android:layout_weight="1"
+                android:textColor="@color/c_333333"
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size15"
+                android:textColor="@color/c_333333"
+                android:text="至   结束日期"/>
+
+            <TextView
+                android:id="@+id/endTimeTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="@dimen/text_size15"
+                android:textColor="@color/c_999999"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="7dp"
+            android:background="@color/line"/>
+
+        <LinearLayout
+            android:id="@+id/timePanelLl"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+            android:layout_height="150dp"/>
+
+        <View
+            style="@style/line"
+            android:layout_marginTop="7dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/resetTv"
+                android:layout_width="113dp"
+                android:layout_height="32dp"
+                android:text="重置"
+                android:textColor="@color/c_333333"
+                android:textSize="@dimen/text_size15"
+                android:gravity="center"
+                android:background="@drawable/shape_dialog_cancel_btn"/>
+
+            <TextView
+                android:id="@+id/confirmTv"
+                android:layout_width="114dp"
+                android:layout_height="33dp"
+                android:text="确定"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size15"
+                android:layout_marginLeft="64dp"
+                android:gravity="center"
+                android:background="@drawable/shape_dialog_confirm_btn"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--阴影-->
+    <View
+        android:id="@+id/translucentView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+</LinearLayout>

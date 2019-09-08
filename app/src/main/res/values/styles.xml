@@ -1,0 +1,85 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+   <!-- <style name="AppTheme" parent="Base.Theme.AppCompat.Light.DarkActionBar">
+        &lt;!&ndash; Customize your theme here. &ndash;&gt;
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+
+        &lt;!&ndash;Activity进场、出场动画 5.0后支持的方式&ndash;&gt;
+       &lt;!&ndash; <item name="android:windowContentTransitions" tools:targetApi="lollipop">true</item>&ndash;&gt;
+
+        &lt;!&ndash;Activity进场、出场动画 传统方式&ndash;&gt;
+       &lt;!&ndash; <item name="android:windowAnimationStyle">@style/AnimationActivity</item>&ndash;&gt;
+    </style>-->
+
+    <!--Transition是给window做动画，有的时候需要activity完全透明-->
+    <style name="AppTheme.Trans" parent="AppTheme">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+
+    <!--Activity进场、出场动画 传统方式-->
+    <style name="AnimationActivity" parent="@android:style/Animation.Activity">
+        <!--用于设置打开新的Activity并进入新的Activity展示的动画-->
+        <item name="android:activityOpenEnterAnimation">@anim/slide_in_right</item>
+        <!--用于设置打开新的Activity并销毁之前的Activity展示的动画-->
+        <item name="android:activityOpenExitAnimation">@anim/slide_out_left</item>
+        <!--用于设置关闭当前Activity进入上一个Activity展示的动画-->
+        <item name="android:activityCloseEnterAnimation">@anim/slide_in_left</item>
+        <!--用于设置关闭当前Activity时展示的动画-->
+        <item name="android:activityCloseExitAnimation">@anim/slide_out_right</item>
+    </style>
+
+
+
+<style name="TabRadioButton">
+   <item name="android:layout_width">0dp</item>
+   <item name="android:layout_weight">1</item>
+   <item name="android:layout_height">match_parent</item>
+   <item name="android:padding">4dp</item>
+   <item name="android:gravity">center</item>
+   <item name="android:button">@null</item>
+   <item name="android:textSize">12dp</item>
+   <item name="android:textColor">@color/tab_text_color_selector</item>
+</style>
+
+
+
+    <!--透明对话框，为了解决Dialog和窗口的间隙问题 -->
+    <style name="transparentFrameWindowStyle" parent="android:style/Theme.Dialog">
+        <item name="android:windowBackground">@color/transparent</item>
+    </style>
+    <!--对话框动画-->
+    <style name="main_menu_animstyle">
+        <item name="android:windowEnterAnimation">@anim/dialog_in_from_bottom_anim</item>
+        <item name="android:windowExitAnimation">@anim/dialog_out_from_bottom_anim</item>
+    </style>
+    <!--全屏对话框-->
+    <style name="Dialog.FullScreen" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowIsFloating">false</item>
+    </style>
+
+
+    <!--1像素界面样式，windowContentOverlay为空，是去掉了遮盖层-->
+    <style name="LiveActivityStyle">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+
+    <!--切割线-->
+    <style name="line">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.5dp</item>
+        <item name="android:background">@color/line</item>
+    </style>
+
+
+</resources>

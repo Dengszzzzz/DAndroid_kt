@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="com.sz.dengzh.dandroid_kt">
+
+    <!--         普通权限           -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.SENSOR_ENABLE" />
+    <!--targetSdkVersion>=28，前台服务需要此权限-->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <!--电源锁权限-->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!--接收开机广播的权限-->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+
+
+    <!--         危险权限        -->
+    <!--联系人-->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <!--电话-->
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.WRITE_CALL_LOG" />
+    <uses-permission android:name="android.permission.USE_SIP" />
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <uses-permission android:name="com.android.voicemail.permission.ADD_VOICEMAIL" />
+    <!--日历-->
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+    <!--相机拍照-->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!--传感器-->
+    <uses-permission android:name="android.permission.BODY_SENSORS" />
+    <!--定位权限-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!--存储-->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!--音频-->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!--短信-->
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_WAP_PUSH" />
+    <uses-permission android:name="android.permission.RECEIVE_MMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.READ_CELL_BROADCASTS" />
+
+
+
+
+
+    <!--    其他权限    -->
+    <!--获取任务信息,允许程序获取当前或最近运行的应用-->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <!--指纹权限-->
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+    <!--调起安装页面需要-->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <!--读取系统底层日志-->
+    <uses-permission android:name="android.permission.READ_LOGS"
+                     tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+                     tools:ignore="ProtectedPermissions" />
+
+
+    <!--
+
+        &lt;!&ndash;源码权限&ndash;&gt;
+        <permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+                 android:permissionGroup="android.permission-group.STORAGE"
+                 android:label="@string/permlab_sdcardRead"
+                 android:description="@string/permlab_sdcardRead"
+                 android:protectionLevel="dangerous" />
+
+        <permission android:name="android.permission.INTERNET"
+                 android:description="@string/permdesc_createNetworkSockets"
+                 android:label="@string/permlab_createNetworkSockets"
+                 android:protectionLevel="normal|instant" />
+    -->
+
+    <!-- uses-feature
+          是对外提供了一组信息，表明它所依赖的硬件特征，这个信息是给应用市场使用的，应用市场读取use-feature的
+          设置，在分发app时就自动过滤掉那些不支持的设备。-->
+    <uses-feature android:name="android.hardware.Camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <application
+            android:name=".App"
+            android:allowBackup="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:roundIcon="@mipmap/ic_launcher_round"
+            android:supportsRtl="true"
+            android:theme="@style/AppTheme"
+            tools:ignore="GoogleAppIndexingWarning">
+
+        <activity android:name=".moduel.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+
+            <!-- url 跳转app   <a href="[scheme]://[host]/[path]?[query]">启动应用程序</a> -->
+            <intent-filter>
+                <!-- 必须加否否无法响应点击链接的 Intent -->
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data
+                        android:scheme="dzh"
+                        android:host="summary"
+                        android:pathPrefix="/open"
+                />
+            </intent-filter>
+        </activity>
+        <activity android:name=".moduel.viewdetails.viewpager.ViewPagerListActivity"/>
+        <activity android:name=".moduel.viewdetails.viewpager.tabpager.TabPagerActivity"/>
+        <activity android:name=".moduel.viewdetails.viewpager.tabpager.TabIndicatorActivity"/>
+        <activity android:name=".moduel.viewdetails.viewpager.BanPagerActivity"/>
+        <activity android:name=".moduel.viewdetails.customview.MyViewActivity"/>
+        <activity android:name=".moduel.viewdetails.customview.CustomListActivity"/>
+        <activity android:name=".moduel.viewdetails.customview.InflaterActivity"/>
+        <activity android:name=".moduel.viewdetails.customview.VerticalStepViewActivity"/>
+        <activity android:name=".moduel.viewdetails.customview.NiceImageActivity"/>
+        <activity android:name=".moduel.viewdetails.anim.AnimListActivity"/>
+        <activity android:name=".moduel.viewdetails.anim.FrameAnimActivity"/>
+        <activity android:name=".moduel.viewdetails.anim.TweenAnimActivity"/>
+        <activity android:name=".moduel.viewdetails.anim.ObjectAnimActivity"/>
+        <activity android:name=".moduel.viewdetails.anim.TransitionActivity"/>
+        <activity android:name=".moduel.viewdetails.anim.TransitionActivityB" android:theme="@style/AppTheme.Trans"/>
+        <activity android:name=".moduel.viewdetails.anim.ShareAnimActivity"/>
+        <activity android:name=".moduel.viewdetails.anim.ShareAnimActivityB"/>
+        <activity android:name=".moduel.specialFunc.emoji_encoder.EmojiEncoderActivity"/>
+        <activity android:name=".moduel.specialFunc.download.DownloadListActivity"/>
+        <service android:name=".moduel.specialFunc.download.DownloadIntentService" />
+
+    </application>
+
+</manifest>

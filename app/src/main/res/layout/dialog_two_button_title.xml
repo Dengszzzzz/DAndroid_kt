@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="vertical"
+        android:padding="5dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/closeIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/dialog_close_icon"
+            android:padding="5dp"/>
+
+        <TextView
+            android:id="@+id/titleTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="标题"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="35dp"
+            android:textSize="@dimen/text_size15"
+            android:textColor="@color/c_333333"
+            />
+
+        <TextView
+            android:id="@+id/contentTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="内容"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="35dp"
+            android:textSize="@dimen/text_size15"
+            android:textColor="@color/c_333333"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="35dp"
+            android:layout_marginBottom="15dp">
+
+            <TextView
+                android:id="@+id/cancelTv"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:text="取消"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/c_333333"
+                android:textSize="@dimen/text_size12"
+                android:layout_gravity="center"
+                android:background="@drawable/shape_dialog_cancel_btn"/>
+
+            <TextView
+                android:id="@+id/confirmTv"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="20dp"
+                android:text="确定"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size12"
+                android:layout_gravity="center"
+                android:background="@drawable/shape_dialog_confirm_btn" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

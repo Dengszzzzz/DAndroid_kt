@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+<external-path/>代表的根目录: Environment.getExternalStorageDirectory()
+<files-path/>代表的根目录： Context.getFilesDir()
+<cache-path/>代表的根目录: getCacheDir()
+path="xxx"表示你要共享的文件夹
+-->
+
+<!--
+下面这句代表的目录即为：Environment.getExternalStorageDirectory()/com.sz.dzh.dandroidsummary/download/
+-->
+<paths>
+    <!--下载apk路径-->
+    <external-path name="download_apk_path" path="com.sz.dzh.dandroid_kt/download/"/>
+
+    <!--图片保存路径-->
+    <external-path name="my_images" path="com.sz.dzh.dandroid_kt/DASImage/"/>
+
+</paths>

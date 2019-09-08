@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <include
+        android:id="@+id/titleBar"
+        layout="@layout/top_view"/>
+
+    <!--ConstraintLayout 里的子View 不用match_parent-->
+    <TextView
+        android:id="@+id/bannerTv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/c_87cfdc"
+        android:gravity="center"
+        android:text="Service测试"
+        app:layout_constraintDimensionRatio="H,3:1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleBar"/>
+
+    <Button
+        android:id="@+id/start2Bt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/startBt"
+        app:layout_constraintRight_toLeftOf="@+id/stop2Bt"
+        android:textAllCaps="false"
+        android:text="IntentService启动"/>
+
+    <Button
+        android:id="@+id/stop2Bt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/start2Bt"
+        app:layout_constraintBottom_toTopOf="@+id/stopBt"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textAllCaps="false"
+        android:text="IntentService停止"/>
+
+    <!--类似 Ll和weight搭配-->
+    <Button
+        android:id="@+id/startBt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/stopBt"
+        android:text="启动"/>
+
+    <Button
+        android:id="@+id/stopBt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/startBt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/bindBt"
+        android:text="停止"/>
+
+    <Button
+        android:id="@+id/bindBt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/stopBt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/unBindBt"
+        android:text="绑定"/>
+
+
+    <Button
+        android:id="@+id/unBindBt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/bindBt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="解绑"/>
+
+
+</android.support.constraint.ConstraintLayout>

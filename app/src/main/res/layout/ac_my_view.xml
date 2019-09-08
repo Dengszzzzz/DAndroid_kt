@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <include
+        layout="@layout/top_view"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MyViewGroup  wrap_content,MyView确定大小"/>
+
+    <com.sz.dengzh.dandroid_kt.widget.custom.MyViewGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+         <com.sz.dengzh.dandroid_kt.widget.custom.MyView
+             android:layout_width="30dp"
+             android:layout_height="30dp"
+             android:background="@color/c_87cfdc"
+             app:defaultSize="20dp"/>
+
+
+    </com.sz.dengzh.dandroid_kt.widget.custom.MyViewGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MyViewGroup  wrap_content,MyView wrap_content"/>
+
+    <com.sz.dengzh.dandroid_kt.widget.custom.MyViewGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <com.sz.dengzh.dandroid_kt.widget.custom.MyView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/c_87cfdc"
+            app:defaultSize="80dp"/>
+
+        <com.sz.dengzh.dandroid_kt.widget.custom.MyView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@color/c_87cfdc"/>
+
+    </com.sz.dengzh.dandroid_kt.widget.custom.MyViewGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MyViewGroup  wrap_content,MyView Match_parent,这个有触摸事件"/>
+
+    <com.sz.dengzh.dandroid_kt.widget.custom.MyViewGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <com.sz.dengzh.dandroid_kt.widget.custom.MyView
+            android:id="@+id/myView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/c_87cfdc"
+            app:defaultSize="80dp"/>
+
+    </com.sz.dengzh.dandroid_kt.widget.custom.MyViewGroup>
+
+</LinearLayout>
